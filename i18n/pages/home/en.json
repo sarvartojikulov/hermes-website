@@ -1,0 +1,48 @@
+{
+    "Index": {
+        "title": "Hello world!"
+    },
+    "home-page": {
+        "Landing": {
+            "Help": {
+                "header": "I want to help",
+                "body": "Charity Fund «HERMES» grateful to all caring Ukrainians, foreign partners and donors for the incredible help and support of the Ukrainian civilian population during the war.A low bow to our Defenders, and a huge thanks to those who donate to the Armed Forces of Ukraine.",
+                "button": "DONATE"
+            },
+            "Ask": {
+                "header": "I need help",
+                "body": "Charity Fund «HERMES» provide the assistance to the Armed Forces of Ukraine. We provide assistance to civilians located on de-occupied territories and front-line zones.",
+                "button": "ASK FOR HELP"
+            }
+        },
+        "AboutUs": {
+            "label": "About us",
+            "contents": {
+                "0": "Charity Fund «HERMES» was founded with aim to help the Armed Forces of Ukraine, servicemen on the front lines and those in need of treatment and rehabilitation after injuries.",
+                "1": "During the war, the civilian population of Ukraine is in danger and need help. The Fund provide assistance to civilians located on de-occupied territories and front-line zones."
+            },
+            "button": "Contact"
+        },
+        "FAQ": {
+            "label": "Frequently Asked Questions",
+            "contents": {
+                "0": {
+                    "question": "Whom does the Fund provide military assistance? ",
+                    "answer": "(Fund helps combat units (Armed Forces of Ukraine, National Guard of Ukraine, State Border Guard Service of Ukraine, Territorial Defence). We provide assistance according to the Fund’s capabilities."
+                },
+                "1": {
+                    "question": "I am a person; can I ask for single help?",
+                    "answer": "(We cooperate with community authorities, institutions or NGOs representatives, who take responsibility of distributing or using the aid for civilians in need. They provide an official request letter with list of needed aid."
+                },
+                "2": {
+                    "question": "How can I fill in the Form for getting help",
+                    "answer": "(To ask for help, you should fill in the Form переход на файл запрос), put the signature of Commander of Military Unit / or chair of medical institution, put the stamp of the Unit or institution and send it to us by e-mail Email: yatsiuk20@gmail.com"
+                },
+                "3": {
+                    "question": "Who pays the expenses of the Fund? ",
+                    "answer": "The foundation's team does not take any percentage of charitable contributions for military assistance or humanitarian aid to civilians to cover operational needs. All operational expenses are covered by Fund founders."
+                }
+            }
+        }
+    }
+}
