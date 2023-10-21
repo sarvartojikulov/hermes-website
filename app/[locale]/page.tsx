@@ -122,13 +122,10 @@ const TempBlog = () => {
                     color="primary"
                 />
             </div>
-            <div className="col-span-full">
+            <div className="col-span-full relative">
                 <Blog />
             </div>
 
-            <div className="row-start-3 col-start-1 lg:col-start-6 col-span-2 flex justify-start lg:justify-center">
-                <CTA color="secondary" label="More" />
-            </div>
         </section>
     );
 };
