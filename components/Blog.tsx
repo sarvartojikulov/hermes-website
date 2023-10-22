@@ -64,10 +64,10 @@ const Blog: React.FC = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <button className="arrow-left absolute mt-5 left-0 md:mt-0 md:-left-20 md:top-1/2 cursor-pointer">
+            <button className="arrow-left absolute mt-5 left-0 md:mt-0 md:-left-14 lg:-left-20 md:top-1/2 cursor-pointer">
               <ChevronLeftIcon className="text-black w-10 h-10"/>
             </button>
-            <button className="arrow-right absolute mt-5 right-0 md:mt-0 md:-right-20 md:top-1/2 cursor-pointer">
+            <button className="arrow-right absolute mt-5 right-0 md:mt-0 md:-right-14 lg:-right-20 md:top-1/2 cursor-pointer">
               <ChevronRightIcon className="text-black w-10 h-10"/>
               </button>
         </React.Fragment>
