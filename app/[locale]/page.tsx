@@ -6,6 +6,7 @@ import Blog from "@/components/Blog";
 import clsx from "clsx";
 import { FAQItem } from "@/components/FAQItem";
 import { useTranslations } from "use-intl";
+import Link from "next/link";
 
 export default function Home() {
     const t = useTranslations("home-page");
@@ -32,7 +33,12 @@ export default function Home() {
                         {t("Landing.Help.body")}
                     </p>
                     <div className="flex justify-start lg:justify-start">
-                        <CTA color="primary" label={t("Landing.Help.button")} />
+                        <Link href="/donate">
+                            <CTA
+                                color="primary"
+                                label={t("Landing.Help.button")}
+                            />
+                        </Link>
                     </div>
                 </div>
                 <div
@@ -69,19 +75,26 @@ export default function Home() {
                         color="primary"
                     />
                 </div>
-                <div className="col-span-5 row-start-2 flex flex-col gap-4">
+                <div className="col-span-full row-start-2 flex flex-col gap-4 lg:px-40">
                     {[0, 1].map((key) => (
-                        <p className="text-lg font-medium" key={key}>
+                        <p className="text-xl font-semibold" key={key}>
                             {t(`AboutUs.contents.${key}`)}
                         </p>
                     ))}
                 </div>
                 <div className="row-start-3 col-start-1 lg:col-start-6 col-span-2 flex justify-start lg:justify-center">
-                    <CTA color="primary" label={t("AboutUs.button")} />
+                    <Link href="/contact">
+                        <CTA color="primary" label={t("AboutUs.button")} />
+                    </Link>
                 </div>
             </section>
-
-            <TempBlog />
+            <section
+                className={clsx(
+                    "grid grid-cols-6 gap-y-8 lg:gap-y-16 lg:grid-cols-12 pb-20 md:pb-0"
+                )}
+            >
+                <Blog />
+            </section>
 
             <section
                 className={clsx(
@@ -107,25 +120,3 @@ export default function Home() {
         </main>
     );
 }
-
-const TempBlog = () => {
-    return (
-        <section
-            className={clsx(
-                "grid grid-cols-6 gap-y-8 lg:gap-y-16 lg:grid-cols-12 pb-20 md:pb-0"
-            )}
-        >
-            <div className="col-span-6">
-                <Headline
-                    size="medium"
-                    label="Latest News And Updates"
-                    color="primary"
-                />
-            </div>
-            <div className="col-span-full relative">
-                <Blog />
-            </div>
-
-        </section>
-    );
-};
