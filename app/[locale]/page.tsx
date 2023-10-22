@@ -112,7 +112,7 @@ const TempBlog = () => {
     return (
         <section
             className={clsx(
-                "grid grid-cols-6 gap-y-8 lg:gap-y-16 lg:grid-cols-12"
+                "grid grid-cols-6 gap-y-8 lg:gap-y-16 lg:grid-cols-12 pb-20 md:pb-0"
             )}
         >
             <div className="col-span-6">
