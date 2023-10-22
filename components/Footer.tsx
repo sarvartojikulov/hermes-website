@@ -59,22 +59,22 @@ const Footer: React.FC = () => {
                 </ul>
                 <ul className="col-span-full md:col-span-1 grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4 px-10 md:px-0 lg:w-40">
                     <li className="flex py-4 rounded-xl justify-center items-center bg-slate-800 cursor-pointer">
-                        <Link href="">
+                        <Link target="_blank" href="https://www.facebook.com/CharityfundHermes">
                             <IconFacebook className="w-10 h-10 md:w-8 md:h-8" />
                         </Link>
                     </li>
                     <li className="flex py-4 rounded-xl justify-center items-center bg-slate-800 cursor-pointer">
-                        <Link href="">
+                        <Link target="_blank" href="https://instagram.com/charityfund_hermes">
                             <IconInstagram className="w-10 h-10 md:w-8 md:h-8" />
                         </Link>
                     </li>
                     <li className="flex py-4 rounded-xl justify-center items-center bg-slate-800 cursor-pointer">
-                        <Link href="">
+                        <Link href="mailto:charity_hermes@ukr.net">
                             <EnvelopeIcon className="w-10 h-10 md:h-7 md:w-7" />
                         </Link>
                     </li>
                     <li className="flex py-4 rounded-xl justify-center items-center bg-slate-800 cursor-pointer">
-                        <Link href="">
+                        <Link href="tel:+38 098 2181814">
                             <PhoneArrowDownLeftIcon className="w-8 h-8 md:h-6 md:w-6" />
                         </Link>
                     </li>

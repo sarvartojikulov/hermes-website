@@ -29,7 +29,11 @@ export default function Contact() {
                 <div className="py-12 bg-slate-200 rounded col-span-6 flex justify-center items-center">
                     <div className="flex flex-col gap-4">
                         <p>Phone Number</p>
-                        <span className="text-5xl">+111111111111</span>
+                        <Link href="tel:+38 098 2181814">
+                            <span className="text-4xl underline">
+                                +38 098 2181814
+                            </span>
+                        </Link>
                     </div>
                 </div>
 
@@ -73,13 +77,23 @@ export default function Contact() {
                         <p>Social Media</p>
                         <ul className="flex text-slate-900 gap-x-4">
                             <li className="bg-slate-900 px-4 py-4 rounded-xl flex items-center">
-                                <Link href={""}>
+                                <Link
+                                    target="_blank"
+                                    href={
+                                        "https://www.facebook.com/CharityfundHermes"
+                                    }
+                                >
                                     <IconFacebook className="w-10 h-10 lg:w-12 lg:h-12" />
                                 </Link>
                             </li>
 
                             <li className="bg-slate-900 p-4 rounded-xl flex items-center">
-                                <Link href={""}>
+                                <Link
+                                    target="_blank"
+                                    href={
+                                        "https://instagram.com/charityfund_hermes"
+                                    }
+                                >
                                     <IconInstagram className="w-10 h-10 lg:w-12 lg:h-12" />
                                 </Link>
                             </li>
