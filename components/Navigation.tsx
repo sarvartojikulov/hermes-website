@@ -100,7 +100,7 @@ const Navigation = () => {
                   key={item.label}
                   label={t(item.label)}
                   path={item.path}
-                  active={pathname === item.path}
+                  active={pathname.split("/").includes(item.path.replace("/", ""))}
                 />
               ))}
               <div className="lg:hidden mt-auto mb-40 space-y-3 lg:m-0 lg:gap-6 lg:space-y-0">

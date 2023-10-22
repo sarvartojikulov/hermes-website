@@ -29,7 +29,7 @@ const navigations = [
     {
         label: "privacy",
         path: "/privacy-policy",
-    }
+    },
 ];
 
 const Footer: React.FC = () => {
@@ -42,9 +42,11 @@ const Footer: React.FC = () => {
                     <Link href={"/"}>
                         <SVGLogo className="h-32 md:h-20 lg:h-32 mr-12 md:mr-8 lg:mr-4" />
                     </Link>
-                    <h5 className="text-4xl md:text-3xl lg:text-5xl font-bold text-slate-50">HERMES</h5>
+                    <h5 className="text-4xl md:text-3xl lg:text-5xl font-bold text-slate-50">
+                        HERMES
+                    </h5>
                 </div>
-                <ul className="col-span-full md:col-span-1 flex flex-col gap-3">
+                <ul className="col-span-full md:col-span-1 flex flex-col gap-3 px-10 md:px-0">
                     {navigations.map((item) => (
                         <li>
                             <Link href={item.path}>
@@ -55,22 +57,26 @@ const Footer: React.FC = () => {
                         </li>
                     ))}
                 </ul>
-                <ul className="flex flex-col gap-3">
-                    <li className="flex gap-4">
-                        <IconFacebook width={24} height={24} />
-                        <span>Facebook</span>
+                <ul className="col-span-full md:col-span-1 grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4 px-10 md:px-0 lg:w-40">
+                    <li className="flex py-4 rounded-xl justify-center items-center bg-slate-800 cursor-pointer">
+                        <Link href="">
+                            <IconFacebook className="w-10 h-10 md:w-8 md:h-8" />
+                        </Link>
                     </li>
-                    <li className="flex gap-4">
-                        <IconInstagram width={24} height={24} />
-                        <span>Instagram</span>
+                    <li className="flex py-4 rounded-xl justify-center items-center bg-slate-800 cursor-pointer">
+                        <Link href="">
+                            <IconInstagram className="w-10 h-10 md:w-8 md:h-8" />
+                        </Link>
                     </li>
-                    <li className="flex gap-4">
-                        <EnvelopeIcon height={24} width={24} />
-                        <a href="mailto:email@mail.com">hermes@mail.com</a>
+                    <li className="flex py-4 rounded-xl justify-center items-center bg-slate-800 cursor-pointer">
+                        <Link href="">
+                            <EnvelopeIcon className="w-10 h-10 md:h-7 md:w-7" />
+                        </Link>
                     </li>
-                    <li className="flex gap-4">
-                        <PhoneArrowDownLeftIcon width={22} height={22} />
-                        <a href="# ">+998932132424</a>
+                    <li className="flex py-4 rounded-xl justify-center items-center bg-slate-800 cursor-pointer">
+                        <Link href="">
+                            <PhoneArrowDownLeftIcon className="w-8 h-8 md:h-6 md:w-6" />
+                        </Link>
                     </li>
                 </ul>
             </div>
