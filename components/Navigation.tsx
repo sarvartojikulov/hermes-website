@@ -97,8 +97,7 @@ const Navigation = () => {
                 />
               ))}
               <div className="lg:hidden mt-auto mb-12 space-y-3 lg:m-0 lg:gap-6 lg:space-y-0">
-                <NavItem label="Terms of Use" path="/" active={false} />
-                <NavItem label="Privacy policy" path="/" active={false} />
+                <NavItem label="Privacy policy" path="/privacy-policy" active={false} />
               </div>
             </ul>
           </div>

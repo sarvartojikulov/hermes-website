@@ -29,6 +29,11 @@ const posts = [
         description:
             "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
     },
+    {
+        title: "5 Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+        description:
+            "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
+    },
 ];
 
 const Blog: React.FC = () => {
@@ -38,11 +43,20 @@ const Blog: React.FC = () => {
             <Swiper
                 spaceBetween={50}
                 modules={[Navigation]}
-                slidesPerView={
-                    breakpoint === "lg" ? 3 : breakpoint === "md" ? 2 : 1
-                }
-                loop
+                slidesPerView={1}
+                breakpoints={{
+                  576 : {
+                    slidesPerView : 1
+                  }, 
+                  768 : {
+                    slidesPerView : 2
+                  }, 
+                  1440 : {
+                    slidesPerView: 3
+                  }
+                }}
                 navigation={{ nextEl: ".arrow-right", prevEl: ".arrow-left" }}
+                loop={true}
             >
                 {posts.map((item, i) => (
                     <SwiperSlide key={item.title + i}>
@@ -50,10 +64,10 @@ const Blog: React.FC = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <button className="arrow-left absolute -left-20 top-1/2 cursor-pointer">
+            <button className="arrow-left absolute mt-5 left-0 md:mt-0 md:-left-20 md:top-1/2 cursor-pointer">
               <ChevronLeftIcon className="text-black w-10 h-10"/>
             </button>
-            <button className="arrow-right absolute -right-20 top-1/2 cursor-pointer">
+            <button className="arrow-right absolute mt-5 right-0 md:mt-0 md:-right-20 md:top-1/2 cursor-pointer">
               <ChevronRightIcon className="text-black w-10 h-10"/>
               </button>
         </React.Fragment>

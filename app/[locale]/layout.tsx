@@ -27,8 +27,10 @@ export default async function RootLayout({
 }) {
 
     let messages;
+    let privacyPolicy
     try {
         messages = (await import(`../../i18n/pages/home/${locale}.json`)).default;
+        privacyPolicy = (await import(`../../i18n/pages/privacy-policy/${locale}.json`)).default
     } catch (error) {
         notFound();
     }
@@ -36,7 +38,7 @@ export default async function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <NextIntlClientProvider locale={locale} messages={messages}>
+                <NextIntlClientProvider locale={locale} messages={{...messages,...privacyPolicy}}>
                     <Navigation />
                     {children}
                     <Footer />
