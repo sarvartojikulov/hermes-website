@@ -114,10 +114,9 @@ const Navigation = () => {
             {open ? <XMarkIcon /> : <Bars3Icon />}
           </div>
           <div className="lg:bg-slate-900 py-2 rounded-full">
-            <SVGLogo className="h-12 lg:h-14" />
-            <h5 className="hidden mt-1 font-semibold text-primary-dark text-lg">
-              HERMES
-            </h5>
+            <Link href="/">
+              <SVGLogo className="h-12 lg:h-14" />
+            </Link>
           </div>
         </nav>
       </header>
