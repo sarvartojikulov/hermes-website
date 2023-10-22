@@ -25,12 +25,17 @@ export default async function RootLayout({
     children: React.ReactNode;
     params: any;
 }) {
-
     let messages;
-    let privacyPolicy
+    let privacyPolicy;
+    let commons;
     try {
-        messages = (await import(`../../i18n/pages/home/${locale}.json`)).default;
-        privacyPolicy = (await import(`../../i18n/pages/privacy-policy/${locale}.json`)).default
+        messages = (await import(`../../i18n/pages/home/${locale}.json`))
+            .default;
+        privacyPolicy = (
+            await import(`../../i18n/pages/privacy-policy/${locale}.json`)
+        ).default;
+        commons = (await import(`../../i18n/pages/common/${locale}.json`))
+            .default;
     } catch (error) {
         notFound();
     }
@@ -38,7 +43,10 @@ export default async function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <NextIntlClientProvider locale={locale} messages={{...messages,...privacyPolicy}}>
+                <NextIntlClientProvider
+                    locale={locale}
+                    messages={{ ...messages, ...privacyPolicy, ...commons }}
+                >
                     <Navigation />
                     {children}
                     <Footer />

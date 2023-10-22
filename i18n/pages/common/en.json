@@ -1,0 +1,11 @@
+{
+    "Navigation" : {
+        "home" : "Home",
+        "contact": "Contact",
+        "about": "About Us",
+        "donate" : "Donate",
+        "privacy": "Privacy Policy"
+    },
+    "commons": {
+    }
+}

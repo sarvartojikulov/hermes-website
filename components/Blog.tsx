@@ -90,7 +90,7 @@ const Post: React.FC<PostProps> = ({ post: { title, description } }) => {
                 alt="s"
             />
             <div className="flex flex-col gap-4">
-                <div className="col-start-2 font-semibold text-lg line-clamp-2 max-h-14">
+                <div className="col-start-2 font-semibold text-lg">
                     {title}
                 </div>
             </div>

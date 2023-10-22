@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { SVGLogo } from "./Icons/SVGLogo";
+import { useTranslations } from "next-intl";
 
 const navigations = [
   {
@@ -14,7 +15,7 @@ const navigations = [
     path: "/",
   },
   {
-    label: "about us",
+    label: "about",
     path: "/about",
   },
   {
@@ -28,6 +29,8 @@ const navigations = [
 ];
 
 const Navigation = () => {
+    const t = useTranslations("Navigation");
+
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -95,13 +98,13 @@ const Navigation = () => {
               {navigations.map((item) => (
                 <NavItem
                   key={item.label}
-                  label={item.label}
+                  label={t(item.label)}
                   path={item.path}
                   active={pathname === item.path}
                 />
               ))}
-              <div className="lg:hidden mt-auto mb-12 space-y-3 lg:m-0 lg:gap-6 lg:space-y-0">
-                <NavItem label="Privacy policy" path="/privacy-policy" active={false} />
+              <div className="lg:hidden mt-auto mb-40 space-y-3 lg:m-0 lg:gap-6 lg:space-y-0">
+                <NavItem label={t("privacy")} path="/privacy-policy" active={false} />
               </div>
             </ul>
           </div>
