@@ -1,10 +1,6 @@
 import { Headline } from "@/components/Headline";
 import { IconFacebook } from "@/components/Icons/IconFacebook";
 import { IconInstagram } from "@/components/Icons/IconInstagram";
-import {
-    EnvelopeIcon,
-    PhoneArrowDownLeftIcon,
-} from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Link from "next/link";
 import React from "react";
@@ -50,7 +46,7 @@ export default function Contact() {
                         <p>Email</p>
                         <Link
                             href="mailto:charity_hermes@ukr.net"
-                            className="text-4xl"
+                            className="text-2xl md:text-4xl underline"
                         >
                             charity_hermes@ukr.net
                         </Link>
@@ -76,34 +72,27 @@ export default function Contact() {
                     <div className="flex flex-col gap-4">
                         <p>Social Media</p>
                         <ul className="flex text-slate-900 gap-x-4">
-                            <li className="bg-slate-900 px-4 py-4 rounded-xl">
+                            <li className="bg-slate-900 px-4 py-4 rounded-xl flex items-center">
                                 <Link href={""}>
-                                    <IconFacebook
-                                        className=""
-                                        width={50}
-                                        height={50}
-                                    />
+                                    <IconFacebook className="w-10 h-10 lg:w-12 lg:h-12" />
                                 </Link>
                             </li>
 
-                            <li className="bg-slate-900 p-4 rounded-xl">
+                            <li className="bg-slate-900 p-4 rounded-xl flex items-center">
                                 <Link href={""}>
-                                    <IconInstagram width={50} height={50} />
+                                    <IconInstagram className="w-10 h-10 lg:w-12 lg:h-12" />
                                 </Link>
                             </li>
-                            <li className="bg-slate-900 p-4 text-white flex items-center rounded-xl">
+                            {/* <li className="bg-slate-900 p-4 text-white flex items-center rounded-xl">
                                 <Link href={"mailto:charity_hermes@ukr.net"}>
-                                    <EnvelopeIcon height={45} width={45} />
+                                    <EnvelopeIcon className="w-10 h-10 lg:w-12 lg:h-12" />
                                 </Link>
                             </li>
                             <li className="bg-slate-900 px-5 py-4 rounded-xl text-white flex items-center">
                                 <Link href={"mailto:charity_hermes@ukr.net"}>
-                                    <PhoneArrowDownLeftIcon
-                                        width={40}
-                                        height={40}
-                                    />
+                                    <PhoneArrowDownLeftIcon className="w-8 h-8.5 lg:w-10 lg:h-10" />
                                 </Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
