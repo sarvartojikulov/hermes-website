@@ -47,6 +47,10 @@ const Navigation = () => {
     window.addEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    setOpen(false)
+  }, [pathname])
+
   return (
     <>
       <div
