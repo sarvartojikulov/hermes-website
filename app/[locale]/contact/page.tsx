@@ -26,18 +26,18 @@ export default function Contact() {
                         provide assistance in any way we can.
                     </p>
                 </div>
-                <div className="py-12 bg-slate-200 rounded col-span-6 flex justify-center items-center">
+                <div className="py-12 bg-slate-200 rounded col-span-6 flex justify-start items-center pl-12 lg:pl-10 xl:pl-40">
                     <div className="flex flex-col gap-4">
                         <p>Phone Number</p>
                         <Link href="tel:+38 098 2181814">
-                            <span className="text-4xl underline">
+                            <span className="text-3xl lg:text-4xl underline">
                                 +38 098 2181814
                             </span>
                         </Link>
                     </div>
                 </div>
 
-                <div className="bg-slate-200 rounded col-span-6 flex items-center px-6 py-10">
+                <div className="bg-slate-200 rounded col-span-6 flex items-center px-6 lg:px-20 py-10">
                     <p className="text-xl">
                         Feel free to give us a call at [Your Phone Number]. Our
                         lines are open during our working hours, and our
@@ -45,7 +45,7 @@ export default function Contact() {
                     </p>
                 </div>
 
-                <div className="py-12 bg-slate-200 rounded col-span-6 flex justify-center items-center">
+                <div className="py-12 bg-slate-200 rounded col-span-6 flex justify-start items-center pl-12  lg:pl-10 xl:pl-40">
                     <div className="flex flex-col gap-4">
                         <p>Email</p>
                         <Link
@@ -57,7 +57,7 @@ export default function Contact() {
                     </div>
                 </div>
 
-                <div className="bg-slate-200 rounded col-span-6 flex items-center px-6 py-10">
+                <div className="bg-slate-200 rounded col-span-6 flex items-center px-6 py-10 lg:px-20">
                     <p className="text-xl">
                         You can also reach us via email at{" "}
                         <Link
@@ -72,10 +72,10 @@ export default function Contact() {
                     </p>
                 </div>
 
-                <div className="py-12 bg-slate-200 rounded col-span-6 flex justify-center items-center">
+                <div className="py-12 bg-slate-200 rounded col-span-6 flex justify-start items-center pl-12 lg:pl-10 xl:pl-40">
                     <div className="flex flex-col gap-4">
                         <p>Social Media</p>
-                        <ul className="flex text-slate-900 gap-x-4">
+                        <ul className="flex text-slate-900 gap-x-6">
                             <li className="bg-slate-900 px-4 py-4 rounded-xl flex items-center">
                                 <Link
                                     target="_blank"
@@ -83,7 +83,7 @@ export default function Contact() {
                                         "https://www.facebook.com/CharityfundHermes"
                                     }
                                 >
-                                    <IconFacebook className="w-10 h-10 lg:w-12 lg:h-12" />
+                                    <IconFacebook className=" w-8 h-8" />
                                 </Link>
                             </li>
 
@@ -94,24 +94,14 @@ export default function Contact() {
                                         "https://instagram.com/charityfund_hermes"
                                     }
                                 >
-                                    <IconInstagram className="w-10 h-10 lg:w-12 lg:h-12" />
+                                    <IconInstagram className="w-8 h-8" />
                                 </Link>
                             </li>
-                            {/* <li className="bg-slate-900 p-4 text-white flex items-center rounded-xl">
-                                <Link href={"mailto:charity_hermes@ukr.net"}>
-                                    <EnvelopeIcon className="w-10 h-10 lg:w-12 lg:h-12" />
-                                </Link>
-                            </li>
-                            <li className="bg-slate-900 px-5 py-4 rounded-xl text-white flex items-center">
-                                <Link href={"mailto:charity_hermes@ukr.net"}>
-                                    <PhoneArrowDownLeftIcon className="w-8 h-8.5 lg:w-10 lg:h-10" />
-                                </Link>
-                            </li> */}
                         </ul>
                     </div>
                 </div>
 
-                <div className="bg-slate-200 rounded col-span-6 flex items-center px-6 py-10">
+                <div className="bg-slate-200 rounded col-span-6 flex items-center px-6 py-10 lg:px-20">
                     <p className="text-xl">
                         Connect with us on our social media platforms for the
                         latest updates, inspiring stories, and to be a part of
