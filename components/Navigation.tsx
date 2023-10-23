@@ -81,7 +81,7 @@ const Navigation = () => {
               "lg:static lg:h-full lg:w-auto lg:z-10",
               {
                 "z-10 backdrop-blur-sm fixed": open,
-                "-z-10 delay-300 absolute": !open,
+                "-z-10 delay-300 fixed": !open,
               },
             )}
           >
