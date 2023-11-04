@@ -1,0 +1,22 @@
+{
+  "contact-page": {
+    "label": "Contact",
+    "content0": "We're thrilled that you want to get in touch with us! Your interest in our charity means the world to us, and we're here to answer any questions you may have or provide assistance in any way we can.",
+    "content1": "We are grateful for your interest in our mission and look forward to connecting with you. Your questions, feedback, and collaboration ideas are important to us. Feel free to reach out, and we'll do our best to respond promptly.",
+    "content2": "Thank you for being a part of our community and for making a difference with us.",
+    "contacts": {
+      "phone": {
+        "label": "Phone Number",
+        "content": "Feel free to give us a call at <phone></phone>. Our lines are open during our working hours, and our dedicated team is ready to assist you."
+      },
+      "email": {
+        "label": "Email",
+        "content": "You can also reach us via email at <email>charity_hermes@ukr.net</email>. Whether you have inquiries about our programs, partnership opportunities, or just want to share your thoughts, we're only an email away."
+      },
+      "socials": {
+        "label": "Social Media",
+        "content": "Connect with us on our social media platforms for the latest updates, inspiring stories, and to be a part of our growing community. Follow us on <instagram></instagram> and <facebook></facebook>."
+      }
+    }
+  }
+}
