@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import clsx from "clsx";
-import Link from "next/link";
+import Link from "next-intl/link";
 import { usePathname } from "next/navigation";
 import {
   useRouter as useIntlRouter,
@@ -12,6 +12,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { SVGLogo } from "./Icons/SVGLogo";
 import { useLocale, useTranslations } from "next-intl";
+import { useSelectedLayoutSegment } from "next/navigation";
 
 const navigations = [
   {
@@ -44,6 +45,8 @@ const Navigation = () => {
   const [scrolled, setScrolled] = React.useState(false);
   const headerRef = React.useRef<HTMLElement>(null);
 
+  const segment = useSelectedLayoutSegment();
+
   const handleScroll = () => {
     if (!headerRef.current) {
       return;
@@ -54,15 +57,20 @@ const Navigation = () => {
   };
 
   const changeLanguage = useCallback(() => {
-    console.log(locale);
     if (locale === "ua") {
       intlRouter.replace(intlPathname, { locale: "en" });
       return;
     }
 
     intlRouter.replace(intlPathname, { locale: "ua" });
-  }, [locale]);
+  }, [locale, intlPathname]);
 
+  const isActiveNavItem = (path: string) => {
+    if (path === "/" && !segment) {
+      return true;
+    }
+    return segment === path.replace("/", "");
+  };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, []);
@@ -94,11 +102,11 @@ const Navigation = () => {
         >
           <div
             className={clsx(
-              "inset-0 transition transition-[z-index] duration-100",
+              "fixed transition-[z-index] duration-100",
               "lg:static lg:z-10 lg:h-full lg:w-auto",
               {
-                "fixed z-10 backdrop-blur-sm": open,
-                "fixed -z-10 delay-300": !open,
+                "inset-0 z-10 backdrop-blur-sm": open,
+                "-right-full -z-10 h-screen w-screen delay-300": !open,
               },
             )}
           >
@@ -117,9 +125,7 @@ const Navigation = () => {
                   key={item.label}
                   label={t(item.label)}
                   path={item.path}
-                  active={pathname
-                    .split("/")
-                    .includes(item.path.replace("/", ""))}
+                  active={isActiveNavItem(item.path)}
                 />
               ))}
               <li
@@ -146,7 +152,7 @@ const Navigation = () => {
                 <NavItem
                   label={t("privacy")}
                   path="/privacy-policy"
-                  active={false}
+                  active={isActiveNavItem("/privacy-policy")}
                 />
               </div>
             </ul>
