@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
   const t = useTranslations("Navigation");
 
   return (
-    <footer className="bg-slate-900 pb-16 pt-12">
+    <footer className="bg-slate-900 py-16">
       <div className="text-md container mx-auto grid grid-cols-2 items-center gap-y-12 font-semibold tracking-wide text-zinc-50 md:grid-cols-3 lg:flex lg:justify-between lg:px-12">
         <div className="col-span-2 flex flex-col items-center justify-center gap-12 md:col-span-1 md:gap-4 lg:flex-row">
           <Link href={"/"} aria-label="link to home page">
