@@ -166,7 +166,7 @@ const Navigation = () => {
             {open ? <XMarkIcon /> : <Bars3Icon />}
           </div>
           <div className="rounded-full py-2 lg:bg-slate-900">
-            <Link href="/">
+            <Link href="/" aria-label="logo, link to home page">
               <SVGLogo className="h-12 lg:h-14" />
             </Link>
           </div>

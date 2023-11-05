@@ -1,8 +1,8 @@
 "use client";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
 
-// Import Swiper styles
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import "swiper/css";
@@ -10,104 +10,86 @@ import "swiper/css/navigation";
 import { useTranslations } from "next-intl";
 import { Headline } from "./Headline";
 
-const posts = [
-    {
-        title: "1 Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-        description:
-            "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
-    },
-    {
-        title: "2 Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-        description:
-            "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
-    },
-    {
-        title: "3 Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-        description:
-            "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
-    },
-    {
-        title: "4 Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-        description:
-            "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
-    },
-    {
-        title: "5 Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-        description:
-            "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
-    },
-];
-
 const Blog: React.FC = () => {
-    const t = useTranslations("News");
+  const t = useTranslations("News");
 
-    return (
-        <React.Fragment>
-            <div className="col-span-6">
-                <Headline size="medium" label={t("label")} color="primary" />
-            </div>
-            <div className="col-span-full relative">
-                <Swiper
-                    spaceBetween={50}
-                    modules={[Navigation]}
-                    slidesPerView={1}
-                    breakpoints={{
-                        576: {
-                            slidesPerView: 1,
-                        },
-                        768: {
-                            slidesPerView: 2,
-                        },
-                        1440: {
-                            slidesPerView: 3,
-                        },
-                    }}
-                    navigation={{
-                        nextEl: ".arrow-right",
-                        prevEl: ".arrow-left",
-                    }}
-                    loop={true}
-                >
-                    {[0,1,2,3,4,5].map((item, i) => (
-                        <SwiperSlide key={item + i}>
-                            <Post post={{
-                                title: t(`contents.${item}.title`),
-                                img: t(`contents.${item}.image`)
-                            }} />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-                <button className="arrow-left absolute mt-5 left-0 md:mt-0 md:-left-14 lg:-left-20 md:top-1/2 cursor-pointer">
-                    <ChevronLeftIcon className="text-black w-10 h-10" />
-                </button>
-                <button className="arrow-right absolute mt-5 right-0 md:mt-0 md:-right-14 lg:-right-20 md:top-1/2 cursor-pointer">
-                    <ChevronRightIcon className="text-black w-10 h-10" />
-                </button>
-            </div>
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <div className="col-span-6">
+        <Headline size="medium" label={t("label")} color="primary" tag="h2" />
+      </div>
+      <div className="relative col-span-full">
+        <Swiper
+          spaceBetween={50}
+          modules={[Navigation]}
+          slidesPerView={1}
+          breakpoints={{
+            576: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1440: {
+              slidesPerView: 3,
+            },
+          }}
+          navigation={{
+            nextEl: ".arrow-right",
+            prevEl: ".arrow-left",
+          }}
+          loop={true}
+        >
+          {[0, 1, 2, 3, 4, 5].map((item, i) => (
+            <SwiperSlide key={item + i}>
+              <Post
+                post={{
+                  title: t(`contents.${item}.title`),
+                  img: t(`contents.${item}.image`),
+                }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <button
+          className="arrow-left absolute left-0 mt-5 cursor-pointer md:-left-14 md:top-1/2 md:mt-0 lg:-left-20"
+          aria-label="Swipe left button"
+        >
+          <ChevronLeftIcon className="h-10 w-10 text-black" />
+        </button>
+        <button
+          className="arrow-right absolute right-0 mt-5 cursor-pointer md:-right-14 md:top-1/2 md:mt-0 lg:-right-20"
+          aria-label="Swipe right button"
+        >
+          <ChevronRightIcon className="h-10 w-10 text-black" />
+        </button>
+      </div>
+    </React.Fragment>
+  );
 };
 
 type PostProps = {
-    post: {
-        title: string;
-        img: string;
-    };
+  post: {
+    title: string;
+    img: string;
+  };
 };
 
 const Post: React.FC<PostProps> = ({ post: { title, img } }) => {
-    return (
-        <div className="col-span-full md:col-span-3 flex flex-col gap-4">
-            <img
-                className="col-span-1 row-span-3 max-h-80 w-full object-cover"
-                src={`/news/${img}`}
-                alt="s"
-            />
-            <div className="flex flex-col gap-4">
-                <div className="col-start-2 font-semibold text-lg">{title}</div>
-            </div>
-        </div>
-    );
+  return (
+    <div className="col-span-full flex flex-col gap-4 md:col-span-3">
+      <img
+        className="col-span-1 row-span-3 max-h-80 w-full object-cover"
+        src={`/news/${img}`}
+        alt="blog post image"
+        width="380"
+        height="320"
+      />
+      <div className="flex flex-col gap-4">
+        <div className="col-start-2 text-lg font-semibold">{title}</div>
+      </div>
+    </div>
+  );
 };
 
 export default Blog;

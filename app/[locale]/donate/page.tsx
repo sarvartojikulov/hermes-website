@@ -1,5 +1,4 @@
 "use client";
-
 import { Headline } from "@/components/Headline";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";

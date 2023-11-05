@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-900 pb-16 pt-12">
       <div className="text-md container mx-auto grid grid-cols-2 items-center gap-y-12 font-semibold tracking-wide text-zinc-50 md:grid-cols-3 lg:flex lg:justify-between lg:px-12">
         <div className="col-span-2 flex flex-col items-center justify-center gap-12 md:col-span-1 md:gap-4 lg:flex-row">
-          <Link href={"/"}>
+          <Link href={"/"} aria-label="link to home page">
             <SVGLogo className="mr-12 h-32 md:mr-8 md:h-20 lg:mr-4 lg:h-32" />
           </Link>
           <h5 className="text-4xl font-bold text-slate-50 md:text-3xl lg:text-5xl">
@@ -62,6 +62,7 @@ const Footer: React.FC = () => {
             <Link
               target="_blank"
               href="https://www.facebook.com/CharityfundHermes"
+              aria-label="Facebook"
             >
               <IconFacebook className="h-10 w-10 md:h-8 md:w-8" />
             </Link>
@@ -70,17 +71,18 @@ const Footer: React.FC = () => {
             <Link
               target="_blank"
               href="https://instagram.com/charityfund_hermes"
+              aria-label="Instagram"
             >
               <IconInstagram className="h-10 w-10 md:h-8 md:w-8" />
             </Link>
           </li>
           <li className="flex cursor-pointer items-center justify-center rounded-xl bg-slate-800 py-4">
-            <Link href="mailto:charity_hermes@ukr.net">
+            <Link href="mailto:charity_hermes@ukr.net" aria-label="Email">
               <EnvelopeIcon className="h-10 w-10 md:h-7 md:w-7" />
             </Link>
           </li>
           <li className="flex cursor-pointer items-center justify-center rounded-xl bg-slate-800 py-4">
-            <Link href="tel:+38 098 2181814">
+            <Link href="tel:+38 098 2181814" aria-label="Phone">
               <PhoneArrowDownLeftIcon className="h-8 w-8 md:h-6 md:w-6" />
             </Link>
           </li>

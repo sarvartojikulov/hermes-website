@@ -53,7 +53,12 @@ export default function Home() {
         className={clsx("grid grid-cols-6 gap-y-8 lg:grid-cols-12 lg:gap-y-16")}
       >
         <div className="col-span-6">
-          <Headline size="medium" label={t("AboutUs.label")} color="primary" />
+          <Headline
+            size="medium"
+            label={t("AboutUs.label")}
+            color="primary"
+            tag="h2"
+          />
         </div>
         <div className="col-span-full row-start-2 flex flex-col gap-4 lg:px-40">
           {[0, 1].map((key) => (
@@ -80,7 +85,12 @@ export default function Home() {
         className={clsx("grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-y-16")}
       >
         <div className="col-span-full">
-          <Headline size="medium" label={t("FAQ.label")} color="primary" />
+          <Headline
+            size="medium"
+            label={t("FAQ.label")}
+            color="primary"
+            tag="h2"
+          />
         </div>
 
         {[0, 1, 2, 3].map((key) => (

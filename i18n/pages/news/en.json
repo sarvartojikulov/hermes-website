@@ -1,29 +1,29 @@
 {
-    "News": {
-        "label": "Latest News And Updates",
+  "News": {
+    "label": "Latest News And Updates",
 
-        "contents": {
-            "0": {
-                "title": "Transfer of power banks to the forefront! ",
-                "image": "1.png"
-            },
-            "1": {
-                "title": "On the front lines, our soldiers are sometimes forced to provide themselves with food. The boys were given portable gas stoves - heaters for cooking food and heating.",
-                "image": "3.png"
-            },
-            "2": {
-                "title": "The Fund handed over plate carriers and first-aid kits in the NATO format.",
-                "image": "2.png"
-            },
-            "3": { "title": "1.png", "image": "4.png" },
-            "4": {
-                "title": "Transfer of humanitarian aid in the front-line zone.",
-                "image": "5.png"
-            },
-            "5": {
-                "title": "Folding beds of the NATO standard have arrived to the forefront",
-                "image": "6.png"
-            }
-        }
+    "contents": {
+      "0": {
+        "title": "Transfer of power banks to the forefront! ",
+        "image": "1.webp"
+      },
+      "1": {
+        "title": "On the front lines, our soldiers are sometimes forced to provide themselves with food. The boys were given portable gas stoves - heaters for cooking food and heating.",
+        "image": "3.webp"
+      },
+      "2": {
+        "title": "The Fund handed over plate carriers and first-aid kits in the NATO format.",
+        "image": "2.webp"
+      },
+      "3": { "title": "1.webp", "image": "4.webp" },
+      "4": {
+        "title": "Transfer of humanitarian aid in the front-line zone.",
+        "image": "5.webp"
+      },
+      "5": {
+        "title": "Folding beds of the NATO standard have arrived to the forefront",
+        "image": "6.webp"
+      }
     }
+  }
 }

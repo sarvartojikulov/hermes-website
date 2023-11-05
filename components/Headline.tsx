@@ -5,24 +5,32 @@ type HeadlineProps = {
   size: "large" | "medium";
   label: string;
   color: "primary" | "secondary";
+  tag?: "h1" | "h2" | "h3";
 };
 
-export const Headline: React.FC<HeadlineProps> = ({ label, size, color }) => {
+export const Headline: React.FC<HeadlineProps> = ({
+  label,
+  size,
+  color,
+  tag,
+}) => {
+  const Level = tag !== undefined ? tag : "h1";
+
   return (
     <div
-      className={clsx("lg:w-max px-2 pb-1 border-b-10", {
+      className={clsx("border-b-10 px-2 pb-1 lg:w-max", {
         "border-primary": color === "primary",
         "border-secondary": color === "secondary",
       })}
     >
-      <h1
+      <Level
         className={clsx("text-primary-dark", {
-          "text-4xl lg:text-5xl font-extrabold": size === "large",
-          "text-3xl lg:text-4xl font-bold": size === "medium",
+          "text-4xl font-extrabold lg:text-5xl": size === "large",
+          "text-3xl font-bold lg:text-4xl": size === "medium",
         })}
       >
         {label}
-      </h1>
+      </Level>
     </div>
   );
 };

@@ -37,7 +37,7 @@ export default function Contact() {
         <div className="col-span-6 flex items-center justify-start rounded bg-slate-200 px-6 py-12 md:pl-12 lg:pl-10 xl:pl-40">
           <div className="flex flex-col gap-4">
             <p className="font-bold">{t("contacts.phone.label")}</p>
-            <Link href={`tel:${CONTACTS.phone}`}>
+            <Link href={`tel:${CONTACTS.phone}`} aria-label="Call us">
               <span className="text-3xl underline lg:text-4xl">
                 {CONTACTS.phone}
               </span>
@@ -49,7 +49,11 @@ export default function Contact() {
           <p className="text-xl">
             {t.rich("contacts.phone.content", {
               phone: () => (
-                <Link className="underline" href={`tel:${CONTACTS.phone}`}>
+                <Link
+                  className="underline"
+                  href={`tel:${CONTACTS.phone}`}
+                  aria-label="call us"
+                >
                   {CONTACTS.phone}
                 </Link>
               ),
@@ -62,6 +66,7 @@ export default function Contact() {
             <p className="font-bold">{t("contacts.email.label")}</p>
             <Link
               href={`mailto:${CONTACTS.email}`}
+              aria-label="write email"
               className="text-2xl underline md:text-4xl"
             >
               {CONTACTS.email}
@@ -73,7 +78,11 @@ export default function Contact() {
           <p className="text-xl">
             {t.rich("contacts.email.content", {
               email: () => (
-                <Link href={`mailto:${CONTACTS.email}`} className="underline">
+                <Link
+                  href={`mailto:${CONTACTS.email}`}
+                  className="underline"
+                  aria-label="write email"
+                >
                   {CONTACTS.email}
                 </Link>
               ),
@@ -86,13 +95,21 @@ export default function Contact() {
             <p className="font-bold">{t("contacts.socials.label")}</p>
             <ul className="flex gap-x-6 text-slate-900">
               <li className="flex items-center rounded-xl bg-slate-900 px-4 py-4">
-                <Link target="_blank" href={CONTACTS.socials.facebook}>
+                <Link
+                  target="_blank"
+                  href={CONTACTS.socials.facebook}
+                  aria-label="follow us on Facebook"
+                >
                   <IconFacebook className=" h-8 w-8" />
                 </Link>
               </li>
 
               <li className="flex items-center rounded-xl bg-slate-900 p-4">
-                <Link target="_blank" href={CONTACTS.socials.instagram}>
+                <Link
+                  target="_blank"
+                  href={CONTACTS.socials.instagram}
+                  aria-label="follow us on Instagram"
+                >
                   <IconInstagram className="h-8 w-8" />
                 </Link>
               </li>
