@@ -93,7 +93,7 @@ export default function Home() {
           />
         </div>
 
-        {[0, 1, 2, 3].map((key) => (
+        {[0, 1, 2, 3, 4, 5].map((key) => (
           <FAQItem
             key={key}
             question={t(`FAQ.contents.${key}.question`)}

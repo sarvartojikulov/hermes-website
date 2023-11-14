@@ -46,6 +46,7 @@ export default function Donate() {
           <p className="mx-auto text-2xl">{t("content1")}</p>
           <p className="mx-auto text-2xl">{t("content2")}</p>
           <p className="mx-auto text-2xl">{t("content3")}</p>
+          <p className="mx-auto text-2xl">{t("content4")}</p>
         </div>
       </section>
     </main>
