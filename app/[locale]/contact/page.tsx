@@ -24,7 +24,7 @@ export default function Contact() {
       <section
         className={clsx(
           "mt-20 grid w-full grid-cols-6 gap-x-5 gap-y-12",
-          "lg:grid-cols-12 lg:py-12",
+          "lg:grid-cols-12 lg:py-12 lg:px-20",
         )}
       >
         <div className="col-span-full">
@@ -32,7 +32,7 @@ export default function Contact() {
         </div>
 
         <div className="col-span-full px-2 lg:px-12">
-          <p className="mx-auto text-2xl font-semibold">{t("content0")}</p>
+          <p className="mx-auto text-2xl ">{t("content0")}</p>
         </div>
         <div className="col-span-6 flex items-center justify-start rounded bg-slate-200 px-6 py-12 md:pl-12 lg:pl-10 xl:pl-40">
           <div className="flex flex-col gap-4">
@@ -141,11 +141,11 @@ export default function Contact() {
         </div>
 
         <div className="col-span-full px-2 lg:px-12">
-          <p className="mx-auto mt-12 text-2xl font-semibold">
+          <p className="mx-auto mt-12 text-2xl ">
             {t("content1")}
           </p>
 
-          <p className="mx-auto mt-12 text-2xl font-semibold">
+          <p className="mx-auto mt-12 text-2xl ">
             {t("content2")}
           </p>
         </div>

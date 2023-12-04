@@ -44,7 +44,9 @@ export default function Home() {
           />
           <p className="text-lg font-medium">{t("Landing.Ask.body")}</p>
           <div className="flex justify-start lg:mt-auto lg:justify-start">
-            <CTA color="secondary" label={t("Landing.Ask.button")} />
+            <Link href="/help">
+              <CTA color="secondary" label={t("Landing.Ask.button")} />
+            </Link>
           </div>
         </div>
       </section>

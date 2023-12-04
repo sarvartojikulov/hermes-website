@@ -31,6 +31,10 @@ const navigations = [
     label: "donate",
     path: "/donate",
   },
+  {
+    label: "help",
+    path: "/help",
+  },
 ];
 
 const Navigation = () => {

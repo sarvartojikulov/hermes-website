@@ -12,8 +12,8 @@ export default function Donate() {
     <main className="container mx-auto flex flex-col gap-20 pb-40 md:gap-20 lg:gap-36">
       <section
         className={clsx(
-          "mt-20 grid w-full grid-cols-6 gap-x-5 gap-y-12 lg:px-20",
-          "lg:grid-cols-12 lg:py-12",
+          "mt-20 grid w-full grid-cols-6 gap-x-5 gap-y-12",
+          "lg:grid-cols-12 lg:py-12 lg:px-20",
         )}
       >
         <div className="col-span-full">
