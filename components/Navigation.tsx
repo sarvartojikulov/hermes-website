@@ -13,29 +13,9 @@ import React from "react";
 import { SVGLogo } from "./Icons/SVGLogo";
 import { useLocale, useTranslations } from "next-intl";
 import { useSelectedLayoutSegment } from "next/navigation";
+import { NAVIGATION } from "@/data/data";
 
-const navigations = [
-  {
-    label: "home",
-    path: "/",
-  },
-  // {
-  //   label: "about",
-  //   path: "/about",
-  // },
-  {
-    label: "contact",
-    path: "/contact",
-  },
-  {
-    label: "donate",
-    path: "/donate",
-  },
-  {
-    label: "help",
-    path: "/help",
-  },
-];
+
 
 const Navigation = () => {
   const t = useTranslations("Navigation");
@@ -124,7 +104,7 @@ const Navigation = () => {
                 },
               )}
             >
-              {navigations.map((item) => (
+              {NAVIGATION.map((item) => (
                 <NavItem
                   key={item.label}
                   label={t(item.label)}

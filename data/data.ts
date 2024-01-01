@@ -7,3 +7,22 @@ export const CONTACTS = {
       instagram: "https://instagram.com/charityfund_hermes",
     },
   } as const;
+
+export const NAVIGATION = [
+  {
+    label: "home",
+    path: "/",
+  },
+  {
+    label: "contact",
+    path: "/contact",
+  },
+  {
+    label: "donate",
+    path: "/donate",
+  },
+  {
+    label: "help",
+    path: "/help",
+  },
+];

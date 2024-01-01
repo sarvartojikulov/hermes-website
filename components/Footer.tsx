@@ -8,29 +8,7 @@ import { IconFacebook } from "./Icons/IconFacebook";
 import { SVGLogo } from "./Icons/SVGLogo";
 import Link from "next-intl/link";
 import { useTranslations } from "next-intl";
-
-const navigations = [
-  {
-    label: "home",
-    path: "/",
-  },
-  // {
-  //     label: "about",
-  //     path: "/about",
-  // },
-  {
-    label: "contact",
-    path: "/contact",
-  },
-  {
-    label: "donate",
-    path: "/donate",
-  },
-  {
-    label: "privacy",
-    path: "/privacy-policy",
-  },
-];
+import { NAVIGATION } from "@/data/data";
 
 const Footer: React.FC = () => {
   const t = useTranslations("Navigation");
@@ -47,7 +25,7 @@ const Footer: React.FC = () => {
           </h5>
         </div>
         <ul className="col-span-full flex flex-col gap-3 px-10 md:col-span-1 md:px-0">
-          {navigations.map((item) => (
+          {NAVIGATION.map((item) => (
             <li key={item.path}>
               <Link href={item.path}>
                 <span className="font-semibold uppercase underline">
