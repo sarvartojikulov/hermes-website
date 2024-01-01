@@ -40,9 +40,9 @@ const Footer: React.FC = () => {
       <div className="text-md container mx-auto grid grid-cols-2 items-center gap-y-12 font-semibold tracking-wide text-zinc-50 md:grid-cols-3 lg:flex lg:justify-between lg:px-12">
         <div className="col-span-2 flex flex-col items-center justify-center gap-12 md:col-span-1 md:gap-4 lg:flex-row">
           <Link href={"/"} aria-label="link to home page">
-            <SVGLogo className="mr-12 h-32 md:mr-8 md:h-20 lg:mr-4 lg:h-32" />
+            <SVGLogo className="mr-12 h-32 md:mr-8 md:h-20 lg:mr-4 lg:h-24" />
           </Link>
-          <h5 className="text-4xl font-bold text-slate-50 md:text-3xl lg:text-5xl">
+          <h5 className="text-4xl font-bold text-slate-50 md:text-3xl lg:text-4xl">
             HERMES
           </h5>
         </div>

@@ -1,0 +1,27 @@
+{
+  "help-page": {
+      "label": "Request Assistance",
+      "labelIntro": "Our mission is to provide support and assistance to those in need. Please follow the steps below to submit your help request.",
+      "step1": {
+          "header": "Download the Help Request Form",
+          "content": "To initiate the support process, please download our Help Request Form. Click the link below to access the PDF document:"
+      },
+      "step2": {
+          "header": "Complete the Form",
+          "content": "Thoroughly fill out the form with accurate and detailed information about your situation. Additionally, ensure you obtain the signature of the Commander of your Military Unit or the Chair of your Medical Institution."
+      },
+      "step3": {
+          "header": "Send the Email",
+          "content": "Compose an email to <email>support@charityfundhermes.org</email> and attach the saved Assistance Request Form. In the email subject, please mention 'Help Request - [Your Full Name]'. Feel free to include any additional details or specific requirements you may have."
+      },
+      "privacy": {
+          "label": "Privacy and Confidentiality",
+          "content": "At Charity Fund Hermes, we prioritize your privacy and confidentiality. Rest assured that the information you provide will be handled with the utmost care and only used for the purpose of assisting you."
+      },
+      "contact": {
+          "label": "Contact us",
+          "content0": "If you encounter any issues or have questions regarding the assistance request process, please do not hesitate to <link>contact us</link>. We are here to support you every step of the way.",
+          "content1": "Thank you for reaching out to Charity Fund Hermes. Together, we can make a difference in the lives of those affected by the challenges in Ukraine."
+      }
+  }
+}

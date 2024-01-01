@@ -2,19 +2,13 @@
 import { Headline } from "@/components/Headline";
 import { IconFacebook } from "@/components/Icons/IconFacebook";
 import { IconInstagram } from "@/components/Icons/IconInstagram";
+import { CONTACTS } from "@/data/data";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import Link from "next-intl/link";
 import React from "react";
 
-const CONTACTS = {
-  email: "charity_hermes@ukr.net",
-  phone: "+38 098 2181814",
-  socials: {
-    facebook: "https://www.facebook.com/CharityfundHermes",
-    instagram: "https://instagram.com/charityfund_hermes",
-  },
-} as const;
+
 
 export default function Contact() {
   const t = useTranslations("contact-page");

@@ -8,5 +8,8 @@
         "help": "Request Assistance"
     },
     "commons": {
+        "step": "Step",
+        "download": "Download",
+        "contactUs": "contact us"
     }
 }
