@@ -65,7 +65,7 @@ const HelpPage = () => {
                                 email: () => {
                                     return (
                                         <Link
-                                            href="contact"
+                                            href={`mailto:${CONTACTS.email}`}
                                             className="underline underline-offset-2"
                                         >
                                             {CONTACTS.email}
