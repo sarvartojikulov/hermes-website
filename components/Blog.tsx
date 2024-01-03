@@ -18,7 +18,7 @@ const Blog: React.FC = () => {
       <div className="col-span-6">
         <Headline size="medium" label={t("label")} color="primary" tag="h2" />
       </div>
-      <div className="relative col-span-full">
+      <div className="relative col-span-full lg:px-4 2xl:px-12">
         <Swiper
           spaceBetween={50}
           modules={[Navigation]}
@@ -52,13 +52,13 @@ const Blog: React.FC = () => {
           ))}
         </Swiper>
         <button
-          className="arrow-left absolute left-0 mt-5 cursor-pointer md:-left-14 md:top-1/2 md:mt-0 lg:-left-20"
+          className="arrow-left absolute left-0 mt-5 cursor-pointer md:-left-14 md:top-1/2 md:mt-0 lg:-left-12 xl:-left-8 2xl:-left-2"
           aria-label="Swipe left button"
         >
           <ChevronLeftIcon className="h-10 w-10 text-black" />
         </button>
         <button
-          className="arrow-right absolute right-0 mt-5 cursor-pointer md:-right-14 md:top-1/2 md:mt-0 lg:-right-20"
+          className="arrow-right absolute right-0 mt-5 cursor-pointer md:-right-14 md:top-1/2 md:mt-0 lg:-right-12 xl:-right-8 2xl:-right-2"
           aria-label="Swipe right button"
         >
           <ChevronRightIcon className="h-10 w-10 text-black" />

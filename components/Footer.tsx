@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             </li>
           ))}
         </ul>
-        <ul className="col-span-full grid grid-cols-2 gap-4 px-10 md:col-span-1 md:grid-cols-1 md:px-0 lg:w-40 lg:grid-cols-2">
+        <ul className="col-span-full grid grid-cols-2 gap-4 px-10 md:col-span-1 md:grid-cols-2 md:px-6 lg:px-0 lg:w-40 lg:grid-cols-2">
           <li className="flex cursor-pointer items-center justify-center rounded-xl bg-slate-800 py-4">
             <Link
               target="_blank"
