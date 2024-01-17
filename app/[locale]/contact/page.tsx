@@ -28,11 +28,11 @@ export default function Contact() {
         <div className="col-span-full px-2 lg:px-12">
           <p className="mx-auto text-2xl ">{t("content0")}</p>
         </div>
-        <div className="col-span-6 flex items-center justify-start rounded bg-slate-200 px-6 py-12 md:pl-12 lg:pl-10 xl:pl-40">
+        <div className="col-span-6 flex items-center justify-start rounded bg-slate-200 pl-[10%] py-12">
           <div className="flex flex-col gap-4">
             <p className="font-bold">{t("contacts.phone.label")}</p>
             <Link href={`tel:${CONTACTS.phone}`} aria-label="Call us">
-              <span className="text-3xl underline lg:text-4xl">
+              <span className="text-3xl underline md:text-4xl lg:text-3xl xl:text-4xl">
                 {CONTACTS.phone}
               </span>
             </Link>
@@ -55,13 +55,13 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="col-span-6 flex items-center justify-start rounded bg-slate-200 px-6 py-12 md:pl-12 lg:pl-10 xl:pl-40">
+        <div className="col-span-6 flex items-center justify-start rounded bg-slate-200 py-12 pl-[10%]">
           <div className="flex flex-col gap-4">
-            <p className="font-bold">{t("contacts.email.label")}</p>
+            <p className="font-bold ">{t("contacts.email.label")}</p>
             <Link
               href={`mailto:${CONTACTS.email}`}
               aria-label="write email"
-              className="text-2xl underline md:text-4xl"
+              className="text-2xl underline md:text-4xl lg:text-3xl xl:text-4xl text-ellipsis"
             >
               {CONTACTS.email}
             </Link>
@@ -84,7 +84,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="col-span-6 flex items-center justify-start rounded bg-slate-200 px-6 py-12 md:pl-12 lg:pl-10 xl:pl-40">
+        <div className="col-span-6 flex items-center justify-start rounded bg-slate-200 px-6 py-12 pl-[10%]">
           <div className="flex flex-col gap-4">
             <p className="font-bold">{t("contacts.socials.label")}</p>
             <ul className="flex gap-x-6 text-slate-900">
