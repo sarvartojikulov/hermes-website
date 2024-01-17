@@ -55,9 +55,9 @@ const Navigation = () => {
     }
     return segment === path.replace("/", "");
   };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  // }, []);
 
   useEffect(() => {
     setOpen(false);
