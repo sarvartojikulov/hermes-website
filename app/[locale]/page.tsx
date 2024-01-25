@@ -77,7 +77,7 @@ export default function Home() {
       </section>
       <section
         className={clsx(
-          "grid grid-cols-6 gap-y-8 pb-20 md:pb-0 lg:grid-cols-12 lg:gap-y-16",
+          "grid grid-cols-6 gap-y-8 lg:grid-cols-12 lg:gap-y-16",
         )}
       >
         <Blog />
