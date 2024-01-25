@@ -1,11 +1,11 @@
 "use client";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
 
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import "swiper/css";
+
 import "swiper/css/navigation";
 import { useTranslations } from "next-intl";
 import { Headline } from "./Headline";

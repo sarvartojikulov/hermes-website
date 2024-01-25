@@ -18,7 +18,7 @@ export const Headline: React.FC<HeadlineProps> = ({
 
   return (
     <div
-      className={clsx("border-b-10 px-2 pb-1 lg:w-max w-max", {
+      className={clsx("border-b-10 px-2 pb-1 lg:w-max max-w-max text-wrap", {
         "border-primary": color === "primary",
         "border-secondary": color === "secondary",
       })}
