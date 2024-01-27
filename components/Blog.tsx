@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import { useTranslations } from "next-intl";
 import { Headline } from "./Headline";
 import { ViewfinderCircleIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 const Blog: React.FC = () => {
     const t = useTranslations("News");
@@ -62,7 +63,7 @@ const Blog: React.FC = () => {
                     tag="h2"
                 />
             </div>
-            {modal && (
+            {modal && image && (
                 <div className="fixed z-10 left-0 top-0 w-screen h-screen overflow-auto bg-gray-900 bg-opacity-80">
                     <div className="w-full h-full relative flex items-center justify-center">
                         <div
@@ -76,9 +77,11 @@ const Blog: React.FC = () => {
                             ></XMarkIcon>
                         </div>
                         <div className="w-full px-6 md:px-12 max-h-[600px] relative cursor-pointer">
-                            <img
-                                className="mx-auto row-span-3 w-full max-h-[600px] max-w-[1200px] object-cover"
+                            <Image
+                                className="mx-auto row-span-3 w-full max-h-[600px] max-w-[1200px] object-contain"
                                 src={image}
+                                width={600}
+                                height={600}
                                 alt="blog post image"
                                 onClick={() => {
                                     setModal(false);
@@ -161,12 +164,12 @@ const Post: React.FC<PostProps> = ({ post: { title, img }, onImageClick }) => {
     return (
         <div className="col-span-full flex flex-col gap-4 md:col-span-3">
             <div className="relative cursor-pointer">
-                <img
+                <Image
                     className="col-span-1 row-span-3 max-h-80 md:max-h-60 lg:max-h-80 w-full object-cover"
                     src={imageSrc}
                     alt="blog post image"
-                    width="380"
-                    height="320"
+                    width="600"
+                    height="600"
                     onClick={() => {
                         onImageClick(imageSrc);
                     }}
