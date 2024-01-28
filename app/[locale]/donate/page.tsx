@@ -26,7 +26,7 @@ export default function Donate() {
           <Headline size="medium" label={t("ways")} color="secondary" />
         </div>
 
-        <div className="col-span-12 grid grid-cols-2 gap-4">
+        <div className="col-span-full grid grid-cols-2 gap-4">
             <Link
               target="_blank"
               href="https://www.paypal.com/donate/?hosted_button_id=XTGNPPHY5JSGG"
