@@ -5,14 +5,14 @@ import clsx from "clsx";
 import { FAQItem } from "@/components/FAQItem";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
-import axios from "axios";
+import axiosInstance from "@/base/axios";
 import { InstagramMedia } from "@/base/types";
 
 export default async function Home() {
   const t = await getTranslations("home-page");
   const news = await getTranslations("News");
 
-  const feeds = await axios.get<{data : InstagramMedia[]}>("http://localhost:3000/api/instagram")
+  const feeds = await axiosInstance.get<{data : InstagramMedia[]}>("/api/instagram") 
 
   return (
     <main className="container mx-auto flex flex-col gap-20 pb-40 md:gap-20 lg:gap-36">
@@ -113,3 +113,7 @@ export default async function Home() {
     </main>
   );
 }
+function instance<T>(arg0: string) {
+  throw new Error("Function not implemented.");
+}
+
