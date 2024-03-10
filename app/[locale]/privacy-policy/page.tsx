@@ -1,11 +1,11 @@
 "use client";
 import { Headline } from "@/components/Headline";
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import React from "react";
 
-const PrivacyPolicy = () => {
-  const t = useTranslations("privacy-policy");
+const PrivacyPolicy = async () => {
+  const t = await getTranslations ("privacy-policy");
 
   return (
     <main className="container mx-auto flex flex-col gap-20 md:gap-20 lg:gap-36 pb-40">

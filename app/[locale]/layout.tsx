@@ -4,13 +4,7 @@ import type { Metadata } from "next";
 import { Wix_Madefor_Display } from "next/font/google";
 import "./globals.css";
 
-import { NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
 import { ReactNode } from "react";
-
-export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "ua" }];
-}
 
 type Props = {
   children: ReactNode;

@@ -1,5 +1,4 @@
-import React, { useTransition } from "react";
-import { useLocale, useTranslations } from "next-intl";
+import React from "react";
 import { NAVIGATION } from "@/base/data";
 import { getTranslations } from "next-intl/server";
 import NavigationWrapper from "./NavigationWrapper";
