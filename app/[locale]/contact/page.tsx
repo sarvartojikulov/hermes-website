@@ -1,17 +1,16 @@
-"use client";
 import { Headline } from "@/components/Headline";
 import { IconFacebook } from "@/components/Icons/IconFacebook";
 import { IconInstagram } from "@/components/Icons/IconInstagram";
-import { CONTACTS } from "@/data/data";
+import { CONTACTS } from "@/base/data";
+import { Link } from "@/src/navigation";
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
-import Link from "next-intl/link";
+import { getTranslations } from "next-intl/server";
 import React from "react";
 
 
 
-export default function Contact() {
-  const t = useTranslations("contact-page");
+export default async function Contact() {
+  const t = await getTranslations("contact-page");
 
   return (
     <main className="container mx-auto flex flex-col gap-20 pb-40 md:gap-20 lg:gap-36">

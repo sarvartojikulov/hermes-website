@@ -1,14 +1,13 @@
-"use client";
 import { Headline } from "@/components/Headline";
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
-import { CONTACTS } from "@/data/data";
+import { CONTACTS } from "@/base/data";
+import { getTranslations } from "next-intl/server";
 
-const HelpPage = () => {
-    const t = useTranslations("help-page");
-    const t_common = useTranslations("commons");
+const HelpPage = async () => {
+    const t = await getTranslations("help-page");
+    const t_common = await getTranslations("commons");
 
     return (
         <main className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 py-20 lg:px-20">

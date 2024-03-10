@@ -1,4 +1,3 @@
-"use client";
 import {
   EnvelopeIcon,
   PhoneArrowDownLeftIcon,
@@ -6,12 +5,12 @@ import {
 import { IconInstagram } from "./Icons/IconInstagram";
 import { IconFacebook } from "./Icons/IconFacebook";
 import { SVGLogo } from "./Icons/SVGLogo";
-import Link from "next-intl/link";
-import { useTranslations } from "next-intl";
-import { NAVIGATION } from "@/data/data";
+import { NAVIGATION } from "@/base/data";
+import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
-const Footer: React.FC = () => {
-  const t = useTranslations("Navigation");
+const Footer: React.FC = async () => {
+  const t =  await getTranslations("Navigation");
 
   return (
     <footer className="bg-slate-900 py-16">
@@ -35,7 +34,7 @@ const Footer: React.FC = () => {
             </li>
           ))}
         </ul>
-        <ul className="col-span-full grid grid-cols-2 gap-4 px-10 md:col-span-1 md:grid-cols-2 md:px-6 lg:px-0 lg:w-40 lg:grid-cols-2">
+        <ul className="col-span-full grid grid-cols-2 gap-4 px-10 md:col-span-1 md:grid-cols-2 md:px-6 lg:w-40 lg:grid-cols-2 lg:px-0">
           <li className="flex cursor-pointer items-center justify-center rounded-xl bg-slate-800 py-4">
             <Link
               target="_blank"

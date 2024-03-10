@@ -1,12 +1,11 @@
-"use client";
 import { Headline } from "@/components/Headline";
+import { Link } from "@/src/navigation";
 import clsx from "clsx";
-import { useLocale, useTranslations } from "next-intl";
-import Link from "next-intl/link";
+import { getTranslations } from "next-intl/server";
 import React from "react";
 
-export default function Donate() {
-  const t = useTranslations("donate-page");
+export default async function Donate() {
+  const t = await getTranslations("donate-page");
 
   return (
     <main className="container mx-auto flex flex-col gap-20 pb-40 md:gap-20 lg:gap-36">

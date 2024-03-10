@@ -1,15 +1,18 @@
-"use client";
-
 import { CTA } from "@/components/CTA";
 import { Headline } from "@/components/Headline";
 import Blog from "@/components/Blog";
 import clsx from "clsx";
 import { FAQItem } from "@/components/FAQItem";
-import { useTranslations } from "use-intl";
-import Link from "next-intl/link";
+import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import axios from "axios";
+import { InstagramMedia } from "@/base/types";
 
-export default function Home() {
-  const t = useTranslations("home-page");
+export default async function Home() {
+  const t = await getTranslations("home-page");
+  const news = await getTranslations("News");
+
+  const feeds = await axios.get<{data : InstagramMedia[]}>("http://localhost:3000/api/instagram")
 
   return (
     <main className="container mx-auto flex flex-col gap-20 pb-40 md:gap-20 lg:gap-36">
@@ -75,13 +78,17 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      {feeds.status === 200 && (
       <section
-        className={clsx(
-          "grid grid-cols-6 gap-y-8 lg:grid-cols-12 lg:gap-y-16",
-        )}
+        className={clsx("grid grid-cols-6 gap-y-8 lg:grid-cols-12 lg:gap-y-16")}
       >
-        <Blog />
+        <div className="col-span-6">
+          <Headline size="medium" label={news("label")} color="primary" tag="h2" />
+        </div>
+        <Blog feeds={feeds.data.data}/>
       </section>
+      )}
+      
 
       <section
         className={clsx("grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-y-16")}
