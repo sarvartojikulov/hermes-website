@@ -3,10 +3,7 @@ module.exports = {
         {
             name: "hermes-website",
             script: "npm",
-            args: "start",
-            env_production: {
-                PORT: 4000,
-            },
+            args: "start -- -p 4000",
         },
         {
             name: "api refresh",
