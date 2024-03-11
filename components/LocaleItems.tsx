@@ -16,14 +16,14 @@ const LocaleItems = () => {
     return (
         <li className="flex cursor-pointer items-center gap-2 tracking-wider">
             {locale === "ua" ? (
-                <div onClick={() => changeLang("en")}>
+                <div className="space-x-2" onClick={() => changeLang("en")}>
                     <span>🇬🇧</span>
                     <span className="text-lg font-semibold uppercase text-slate-50">
                         EN
                     </span>
                 </div>
             ) : (
-                <div onClick={() => changeLang("ua")}>
+                <div className="space-x-2" onClick={() => changeLang("ua")}>
                     <span>🇺🇦</span>
                     <span className="text-lg font-semibold uppercase text-slate-50">
                         UA

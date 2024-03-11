@@ -117,7 +117,7 @@ const Blog: React.FC<{feeds : InstagramMedia[]}> = ({feeds}) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="w-full mt-12 flex justify-between">
+        <div className="w-full mt-8 flex justify-between">
           <button
             className="arrow-left left-0  top-1/3 cursor-pointer md:-left-14 md:top-1/2 md:mt-0 lg:-left-1 xl:-left-8 2xl:-left-2"
             aria-label="Swipe left button"
@@ -132,18 +132,6 @@ const Blog: React.FC<{feeds : InstagramMedia[]}> = ({feeds}) => {
             <ChevronRightIcon className="h-10 w-10 text-black" />
           </button>
         </div>
-        {/* <button
-          className="arrow-left absolute left-0  top-1/3 cursor-pointer md:-left-14 md:top-1/2 md:mt-0 lg:-left-1 xl:-left-8 2xl:-left-2"
-          aria-label="Swipe left button"
-        >
-          <ChevronLeftIcon className="h-10 w-10 text-black" />
-        </button>
-        <button
-          className="arrow-right absolute right-0 top-1/3  cursor-pointer md:-right-14 md:top-1/2 md:mt-0 lg:-right-1 xl:-right-8 2xl:-right-2"
-          aria-label="Swipe right button"
-        >
-          <ChevronRightIcon className="h-10 w-10 text-black" />
-        </button> */}
       </div>
     </React.Fragment>
   );
@@ -184,6 +172,9 @@ const Post: React.FC<PostProps> = ({ post : {media_url, caption}, onImageClick }
         >
           <ViewfinderCircleIcon width={30} height={30} />
         </div>
+      </div>
+      <div className="flex flex-col gap-4 ">
+          <div className="col-start-2 text-lg font-semibold line-clamp-2">{caption}</div>
       </div>
     </div>
   );

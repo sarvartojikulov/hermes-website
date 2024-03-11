@@ -12,10 +12,14 @@ export default async function Home() {
   const t = await getTranslations("home-page");
   const news = await getTranslations("News");
 
-  const feeds = await axiosInstance.get<{data : InstagramMedia[]}>("/api/instagram") 
+  const feeds = await axiosInstance.get<{data : InstagramMedia[]}>("/api/instagram")
+    .catch(error => {
+      console.error(error)
+      return error
+    })
 
   return (
-    <main className="container mx-auto flex flex-col gap-20 pb-40 md:gap-20 lg:gap-36">
+    <main className="container mx-auto flex flex-col gap-20 pb-40 xl:gap-36">
       <section
         className={clsx(
           "mt-20 grid w-full grid-cols-6 gap-x-5 gap-y-12",
@@ -23,7 +27,7 @@ export default async function Home() {
         )}
       >
         <div
-          className={clsx("col-span-6 flex flex-col gap-8 lg:gap-16 lg:px-12")}
+          className={clsx("col-span-6 flex flex-col gap-8 lg:gap-16 xl:px-12")}
         >
           <Headline
             size="large"
@@ -38,7 +42,7 @@ export default async function Home() {
           </div>
         </div>
         <div
-          className={clsx("col-span-6 flex flex-col gap-8 lg:gap-16 lg:px-12")}
+          className={clsx("col-span-6 flex flex-col gap-8 lg:gap-16 xl:px-12")}
         >
           <Headline
             size="large"
@@ -113,7 +117,3 @@ export default async function Home() {
     </main>
   );
 }
-function instance<T>(arg0: string) {
-  throw new Error("Function not implemented.");
-}
-
