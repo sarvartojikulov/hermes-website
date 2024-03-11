@@ -6,7 +6,7 @@ export async function GET(_request: NextRequest) {
     const response = await axios.get(
       `https://graph.instagram.com/me/media`, {
         params : {
-          fields : "id,media_type,media_url,caption",
+          fields : "id,media_type,media_url,caption,permalink",
           access_token : process.env.INSTAGRAM_TOKEN
         }
       }
