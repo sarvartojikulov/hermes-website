@@ -1,8 +1,8 @@
 const fs = require("fs");
 const axios = require("axios");
-const child_process = require("child_process");
 const dotenv = require("dotenv");
-
+const pm2 = require("pm2")
+const ecosystem = require("./ecosystem.config")
 
 const CONSTANTS = {
   ENV_FILE : ".env.local"
@@ -31,7 +31,7 @@ async function main() {
 
     // Update the access token
     envConfig.INSTAGRAM_TOKEN = newAccessToken;
-    envConfig.changed = 1;
+    envConfig.lastUpdate = new Date().toISOString();
 
     // Convert the object back to string
     const newEnvContent = Object.keys(envConfig)
@@ -41,8 +41,24 @@ async function main() {
     // Write the new .env file
     fs.writeFileSync(CONSTANTS.ENV_FILE, newEnvContent);
 
-    // child_process.execSync("pm2 reload ecosystem.config.js"); // Adjust based on your PM2 setup (e.g., use specific process name instead of 'all')
-    console.log("Token refreshed and .env updated successfully.");
+    console.log("> Token refreshed and .env updated successfully.");
+
+    pm2.connect((err) => {
+      if(err) {
+        console.error(err)
+        process.exit(2)
+      }
+
+      const website = ecosystem.apps[0]
+
+      pm2.restart(website.name, (err) => {
+        if(err) {
+          console.error(err)
+          process.exit(2)
+        }
+        console.log("> Restarted ", website.name)
+      })
+    })
   } catch (error) {
     console.error("Failed to refresh token and update .env:", error);
   }
