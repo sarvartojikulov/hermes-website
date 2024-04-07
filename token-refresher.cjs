@@ -3,12 +3,14 @@ const axios = require("axios");
 const dotenv = require("dotenv");
 const pm2 = require("pm2")
 const ecosystem = require("./ecosystem.config")
+const { execSync } = require('child_process');
 
 const CONSTANTS = {
   ENV_FILE : ".env.local"
 }
 
 async function main() {
+
   dotenv.config({
     path: CONSTANTS.ENV_FILE,
   });
@@ -22,10 +24,9 @@ async function main() {
           access_token: process.env.INSTAGRAM_TOKEN, 
         },
       },
-    );
+     );
 
     const newAccessToken = response.data.access_token;
-
     const file = fs.readFileSync(CONSTANTS.ENV_FILE)
     const envConfig = dotenv.parse(file);
 
@@ -42,6 +43,10 @@ async function main() {
     fs.writeFileSync(CONSTANTS.ENV_FILE, newEnvContent);
 
     console.log("> Token refreshed and .env updated successfully.");
+
+    console.log("> Building project")
+    execSync("npm run build");
+    console.log("> Project built success")
 
     pm2.connect((err) => {
       if(err) {
